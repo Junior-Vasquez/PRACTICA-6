@@ -1,0 +1,39 @@
+using System;
+
+namespace Ejercicio_3
+{
+   
+   
+    public class ClaseA
+    {   
+        public ClaseA()
+        {
+            Console.WriteLine("\n" + "Este mensaje es de la Clase A");
+        }
+    }
+
+    public class ClaseB : ClaseA
+    {
+        public ClaseB()
+        {
+            Console.WriteLine("\n" + "Este mensaje es de la Clase B");
+        }
+    }
+   
+    class ClaseC : ClaseB
+    {
+       
+       public ClaseC()
+       {
+           Console.WriteLine("\n" + "Este mensaje es de la Clase C");
+       }
+       static void Main(string[] args)
+        {
+            Console.Clear();
+
+            ClaseC imprimir = new ClaseC();
+
+            Console.ReadKey();
+        }
+   }
+}

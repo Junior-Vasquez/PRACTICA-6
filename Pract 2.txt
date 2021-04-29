@@ -1,0 +1,42 @@
+using System;
+
+namespace Ejercicio_2
+{
+      
+    public class Contacto
+    {   
+        private string nombre, apellidos, telefono, direccion;
+
+        public void SetContacto(string nombre, string apellidos, string telefono, string direccion)
+        {
+            this.nombre = nombre;
+            this.apellidos = apellidos;
+            this.telefono = telefono;
+            this.direccion = direccion;
+        }
+
+        public void Saludar()
+        {
+            Console.WriteLine("\n" + "Hola, soy " + nombre + " " + apellidos + ", mi telefono es " + telefono + " y vivo en " + direccion);
+        }
+
+    }
+   
+    class ProbarContacto
+    {
+        static void Main(string[] args)
+        {
+            Console.Clear();
+            
+            Contacto cont1 = new Contacto();
+            cont1.SetContacto ("Daniel", "Martinez", "809-535-5213", "Santo Domingo Este, Villa Duarte No. 86");
+            cont1.Saludar();
+
+            Contacto cont2 = new Contacto();
+            cont2.SetContacto ("Christian", "Lopez", "829-356-4253, "Ciudad Juan Bosch Resd. Antares Edf. 4 Apto. 3-E);
+            cont2.Saludar();
+
+            Console.ReadKey();
+        }
+   }
+}
